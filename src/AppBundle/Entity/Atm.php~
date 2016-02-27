@@ -1,0 +1,53 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Atm
+ *
+ * @ORM\Table(name="atm")
+ * @ORM\Entity
+ */
+class Atm
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="atm", type="string", length=100, nullable=true)
+     */
+    private $atm;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ubication", type="string", length=200, nullable=true)
+     */
+    private $ubication;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="near_of", type="string", length=200, nullable=true)
+     */
+    private $nearOf;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="status", type="boolean", nullable=true)
+     */
+    private $status;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+
+}
